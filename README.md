@@ -3,6 +3,8 @@
 A dedicated front-door panel for Home Assistant. **VoIP Stack handles calls; the project P4 recorder and Voice Inbox handle voice messages.**
 
 Developed by hruba202 with assistance from **OpenAI ChatGPT / Codex**. [VoIP Stack](https://github.com/n-IA-hane/esphome-intercom) by n-IA-hane is installed separately; its implementation is not bundled here.
+Voice Inbox-Doorbell integration, message recording and playback – please install.
+https://github.com/hruba202/voice-inbox
 
 ## Features
 
