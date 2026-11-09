@@ -62,3 +62,8 @@ Use **Reconfigure** to change camera/player only. Finish calls and cancel pendin
 - Newer VoIP versions, independent IP-camera playback and a fresh Marketplace install are not yet fully qualified.
 
 See [VALIDATION.md](VALIDATION.md), [PUBLISHING.md](PUBLISHING.md), [SECURITY.md](SECURITY.md) and [CHANGELOG.md](CHANGELOG.md). Never include credentials or private recordings in issue reports.
+
+<img width="1892" height="664" alt="p401" src="https://github.com/user-attachments/assets/b3687db0-074a-4da7-9f69-ac99a090e7d7" />
+<img width="1891" height="947" alt="p402" src="https://github.com/user-attachments/assets/3acdb52a-0f91-4677-a8b9-ed0c3c0fb5f8" />
+
+
