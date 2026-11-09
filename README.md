@@ -43,7 +43,6 @@ Manual alternative: copy `custom_components/p4_doorbell` into HA's configuration
 
 Calls/replies can be used without setting up recording. For messages, first verify the P4 recorder uploads successfully to Voice Inbox. Then open **Configure** and select the prompt and recorder entities: record, cancel, busy, status and last-call reason. These entities must still belong to the selected door ESP.
 
-The tested firmware records **10 seconds**; this package does not change its duration. A generic microphone entity is not a substitute for the recorder. Its expected states include `Nahravam…`, `Odesilam do HA` and `Ulozeno v HA`.
 
 Automatic fallback is opt-in and requires fresh ringing followed by `timeout`. An answered call or stale timeout does not qualify. Button mode waits up to 60 seconds after the prompt for a press, then a press during recording requests save. Presses during calls/prompts/uploads do not start competing operations. Already started uploads cannot be recalled by Cancel.
 
