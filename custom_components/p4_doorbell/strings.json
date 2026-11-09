@@ -1,0 +1,71 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "P4 Doorbell",
+        "description": "Select the ESPHome caller and 1–3 VoIP Stack browser phones. Camera and player can be independent HA entities. Call state must belong to the caller.",
+        "data": {
+          "door_device": "Door ESPHome device",
+          "door_name": "Exact VoIP caller name",
+          "camera": "Door camera (including an independent IP camera)",
+          "player": "Media player audible at the door",
+          "door_state": "Caller VoIP State sensor",
+          "receivers": "Receiving browser phones (1–3)"
+        }
+      },
+      "reply": {
+        "title": "Prerecorded reply",
+        "description": "Choose a file from HA local media, for example: We cannot open the door right now. This reply does not automatically start recording.",
+        "data": {
+          "reply_label": "Reply button label",
+          "reply": "Reply from My media"
+        }
+      },
+      "reconfigure": {
+        "title": "Change camera and player",
+        "description": "Caller, receivers and recorder stay unchanged. Finish calls and pending messages first. The player must support HA media and report playback start and completion for recording prompts.",
+        "data": {
+          "camera": "Door camera",
+          "player": "Door media player"
+        }
+      }
+    },
+    "error": {
+      "door_entities": "Select an existing camera and player. During setup the call-state sensor must belong to the caller.",
+      "receiver_count": "Select one to three distinct phones.",
+      "local_media": "Select a file from Home Assistant local media.",
+      "busy": "Finish the call, recording or pending message first. The integration must be loaded."
+    },
+    "abort": {
+      "single_instance_allowed": "A doorbell is already configured. Open its sidebar panel.",
+      "already_configured": "The doorbell is already configured.",
+      "reconfigure_successful": "Camera and player updated."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "P4 prompt and voice message",
+        "description": "Select the P4 recorder entities and a prompt. Button mode waits up to 60 seconds after the prompt; a press while recording saves the message. The physical sensor can be omitted for a panel-only test.",
+        "data": {
+          "auto_after_timeout": "Offer and record a message after an unanswered call",
+          "prompt": "Recording prompt (My media)",
+          "record_button": "P4: Record message 10 s",
+          "cancel_button": "P4: Cancel message",
+          "record_busy": "P4: Recorder busy (recording and upload)",
+          "record_status": "P4: Message status",
+          "last_reason": "P4: VoIP Last Reason",
+          "wait_for_button": "Wait for a bell press after the prompt",
+          "visitor_sensor": "P4: Physical bell button sensor (optional for testing)",
+          "save_button": "P4: Stop and save message"
+        }
+      }
+    },
+    "error": {
+      "busy": "Finish the call and cancel pending messages in the doorbell panel first.",
+      "door_entities": "All recorder entities must belong to P4. Record and cancel buttons must differ.",
+      "local_media": "Select a file from My media (HA local media).",
+      "save_required": "Select the stop-and-save button for button mode."
+    }
+  }
+}

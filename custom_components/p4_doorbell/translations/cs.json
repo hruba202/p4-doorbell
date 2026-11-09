@@ -1,0 +1,71 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Dveřní zvonek P4",
+        "description": "Vyber volající ESPHome zařízení a 1–3 telefony prohlížečů VoIP Stacku. Kamera a přehrávač mohou být samostatné entity HA; stav hovoru musí patřit volajícímu zařízení.",
+        "data": {
+          "door_device": "Zařízení ESPHome u dveří",
+          "door_name": "Přesný název volajícího P4 ve VoIP",
+          "camera": "Kamera u dveří (i samostatná IP kamera v HA)",
+          "player": "Přehrávač slyšitelný u dveří",
+          "door_state": "Senzor VoIP State P4",
+          "receivers": "Přijímací telefony prohlížečů (1–3)"
+        }
+      },
+      "reply": {
+        "title": "Přednastavená odpověď",
+        "description": "Vyber zvukový soubor z lokálních médií HA. Například vlastní nahrávku: Právě nemůžeme otevřít. V této etapě se po odpovědi ještě automaticky nespouští nahrávání návštěvníka.",
+        "data": {
+          "reply_label": "Popisek tlačítka odpovědi",
+          "reply": "Zvuková odpověď z Moje média"
+        }
+      },
+      "reconfigure": {
+        "title": "Změnit kameru a přehrávač",
+        "description": "Volající zařízení, přijímače a záznamník zůstanou stejné. Nejdřív ukonči hovor a čekání na vzkaz. Přehrávač musí podporovat přehrávání médií HA; pro výzvu před záznamem také hlásit zahájení a konec přehrávání.",
+        "data": {
+          "camera": "Kamera u dveří",
+          "player": "Přehrávač u dveří"
+        }
+      }
+    },
+    "error": {
+      "door_entities": "Vyber existující kameru a přehrávač. Při přidání musí senzor stavu hovoru patřit volajícímu zařízení.",
+      "receiver_count": "Vyber jeden až tři různé telefony.",
+      "local_media": "Vyber soubor z lokálních médií Home Assistanta.",
+      "busy": "Nejdřív ukonči hovor, čekání nebo nahrávání vzkazu. Integrace musí být načtená."
+    },
+    "abort": {
+      "single_instance_allowed": "Zvonek už je nastavený. Otevři Dveřní zvonek v postranním menu.",
+      "already_configured": "Zvonek už je nastavený.",
+      "reconfigure_successful": "Kamera a přehrávač byly změněny."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Výzva a hlasový vzkaz P4",
+        "description": "Vyber entity záznamníku P4 a zvukovou výzvu. Režim tlačítka po výzvě čeká až 60 sekund na stisk; během snímání další stisk vzkaz uloží. Fyzický senzor můžeš pro první zkoušku nechat prázdný a použít tlačítko na stránce.",
+        "data": {
+          "auto_after_timeout": "Po nezvednutém hovoru automaticky nabídnout a nahrát vzkaz",
+          "prompt": "Zvuková výzva před nahráváním (Moje média)",
+          "record_button": "P4: Vzkaz nahrat 10 s",
+          "cancel_button": "P4: Vzkaz zrusit",
+          "record_busy": "P4: Vzkaz zaneprazdnen (během záznamu i uploadu)",
+          "record_status": "P4: Vzkaz stav",
+          "last_reason": "P4: VoIP Last Reason",
+          "wait_for_button": "Po výzvě čekat na stisk zvonku (režim D8)",
+          "visitor_sensor": "P4: Zvonek fyzicke tlacitko (volitelné pro první zkoušku)",
+          "save_button": "P4: Vzkaz zastavit a ulozit"
+        }
+      }
+    },
+    "error": {
+      "busy": "Nejdřív ukonči hovor a na stránce zvonku zruš čekání nebo sekvenci vzkazu.",
+      "door_entities": "Všechny entity musí patřit P4. Tlačítko nahrávání a zrušení musí být různé.",
+      "local_media": "Vyber soubor z Moje média (lokální média HA).",
+      "save_required": "Pro režim tlačítka vyber Vzkaz zastavit a ulozit."
+    }
+  }
+}
